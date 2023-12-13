@@ -27,11 +27,18 @@ public class ExercicioPilha01 {
 					System.out.println("Digite o nome do livro");
 					nome = leia.nextLine(); 
 					pilha.push(nome);
-					System.out.println(pilha);
+					//System.out.println(pilha);
+					for(String livro : pilha) {
+						System.out.println(livro);
+					}
 					System.out.println("Livro adicionado!");
 					break;
 				case 2:
+					if(pilha.isEmpty()==true) {
+						System.out.println("A pilha está vazia!");
+					}else {
 					System.out.println(pilha);
+					}
 					break;
 				case 3: 
 					if(pilha.isEmpty()== true) {
@@ -41,6 +48,8 @@ public class ExercicioPilha01 {
 						System.out.println("O(a) cliente foi chamado(a)!");
 					}
 					break;
+				case 0:
+					System.out.println("Sistema finalizado");
 				default:
 					System.out.println("Opção inválida!");
 			}

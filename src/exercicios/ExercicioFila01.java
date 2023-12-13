@@ -29,19 +29,36 @@ public class ExercicioFila01 {
 					System.out.println("Digite o nome");
 					nome = leia.nextLine(); 
 					nomes.add(nome);
-					System.out.println(nomes);
+					
+					for(String n: nomes) {
+					System.out.println(n);
+					}
+					
 					System.out.println("Cliente adicionado!");
 					break;
+					
 				case 2:
-					System.out.println(nomes);
+					if(nomes.isEmpty()==true) {
+						System.out.println("A fila está vazia");
+					}else {
+						for(String n: nomes) {
+							System.out.println(n);
+							}
+					}
 					break;
+					
 				case 3: 
 					if(nomes.isEmpty()== true) {
 						System.out.println("A fila está vazia!");
 					}else {nomes.poll();
-						System.out.println(nomes);
+						for(String n: nomes) {
+							System.out.println(n);
+							}
 						System.out.println("O(a) cliente foi chamado(a)!");
 					}
+					break;
+				case 0:
+					System.out.println("Sistema finalizado");
 					break;
 				default:
 					System.out.println("Opção inválida!");
